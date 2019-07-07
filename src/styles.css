@@ -9,6 +9,11 @@ label{
     font-weight: bold;
 }
 
+a {
+    text-decoration: none;
+    color: #337ab7;
+}
+
 @media (min-width: 1200px) {
     .container {
         width: 1170px;
@@ -30,3 +35,4 @@ label{
     width: 90px;
     text-align: center;
 }
+

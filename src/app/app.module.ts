@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { InputTextModule } from 'primeng/components/inputtext/inputtext';
 import { InputTextareaModule } from 'primeng/components/inputtextarea/inputtextarea';
+import { CalendarModule } from 'primeng/components/calendar/calendar';
 import { ButtonModule } from 'primeng/components/button/button';
 import { DataTableModule } from 'primeng/components/datatable/datatable';
 import { TooltipModule } from 'primeng/components/tooltip/tooltip';
@@ -23,11 +25,13 @@ import { LancamentoCadastroComponent } from './lancamento-cadastro/lancamento-ca
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     InputTextModule,
     ButtonModule,
     DataTableModule,
     TooltipModule,
-    InputTextareaModule
+    InputTextareaModule,
+    CalendarModule
 
   ],
   providers: [],
