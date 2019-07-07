@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-lancamentos-pesquisa',
   templateUrl: './lancamentos-pesquisa.component.html',
@@ -16,4 +17,6 @@ export class LancamentosPesquisaComponent  {
     { tipo: 'DESPESA', descricao: 'Aluguel', dataVencimento: new Date(2017, 7, 10), dataPagamento: new Date(2017, 7, 9), valor: 1750, pessoa: 'Casa Nova Imóveis' },
     { tipo: 'DESPESA', descricao: 'Mensalidade musculação', dataVencimento: new Date(2017, 7, 13), dataPagamento: null, valor: 180, pessoa: 'Academia Top' }
   ];
+
+ 
 }
