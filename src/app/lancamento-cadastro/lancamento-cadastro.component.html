@@ -1,5 +1,5 @@
 <div class="container">
-  <form autocomplete="off">
+  <form #f="ngForm" autocomplete="off">
 
     <div class="ui-g">
       <div class="ui-g-12">
@@ -12,7 +12,7 @@
 
       <div class="ui-g-6 ui-md-3 ui-fluid">
         <label >Vencimento</label>
-        <p-calendar dateFormat="dd/mm/yy" [readonlyInput]="false" [showIcon]="false" name="vencimento" ngModel #vencimento="ngModel" required></p-calendar>
+        <p-calendar name="vencimento" dateFormat="dd/mm/yy" [readonlyInput]="false" [showIcon]="false" ngModel #vencimento="ngModel" required></p-calendar>
 
         <app-message [control]="vencimento" error="required" text="Informe uma data de vencimento"></app-message>
       </div>
@@ -49,7 +49,7 @@
       </div>
 
       <div class="ui-g-12">
-        <button pButton type="submit" label="Salvar"></button>
+        <button pButton type="submit" label="Salvar" [disabled]="f.invalid"></button>
         <button pButton type="button" label="Novo" class="ui-button-info"></button>
         <a href="javascript;;">Voltar para a pesquisa</a>
       </div>
