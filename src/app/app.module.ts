@@ -16,13 +16,13 @@ import { InputMaskModule } from 'primeng/components/inputmask/inputmask';
 import { AppComponent } from './app.component';
 
 import { NavbarComponent } from './navbar/navbar.component';
-import { PessoasPesquisaComponent } from './pessoas-pesquisa/pessoas-pesquisa.component';
+import { PessoasPesquisaComponent } from './pessoas/pessoas-pesquisa/pessoas-pesquisa.component';
 
-import { PessoaCadastroComponent } from './pessoa-cadastro/pessoa-cadastro.component';
+import { PessoaCadastroComponent } from './pessoas/pessoa-cadastro/pessoa-cadastro.component';
 import { FormsModule } from '@angular/forms';
 import { MessageComponent } from './message/message.component';
 
-import { PessoasGridComponent } from './pessoas-grid/pessoas-grid.component';
+import { PessoasGridComponent } from './pessoas/pessoas-grid/pessoas-grid.component';
 
 
 @NgModule({
