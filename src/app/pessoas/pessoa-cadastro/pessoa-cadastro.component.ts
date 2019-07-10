@@ -5,7 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './pessoa-cadastro.component.html',
   styleUrls: ['./pessoa-cadastro.component.css']
 })
-export class PessoaCadastroComponent {
+export class PessoaCadastroComponent implements OnInit {
 
- 
+  constructor() { }
+
+  ngOnInit() {
+  }
+
 }

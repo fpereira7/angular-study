@@ -10,19 +10,20 @@ import { DataTableModule } from 'primeng/components/datatable/datatable';
 import { ButtonModule } from 'primeng/components/button/button';
 import { InputTextModule } from 'primeng/components/inputtext/inputtext';
 import { FormsModule } from '@angular/forms';
-import { SelectButtonModule } from 'primeng/components/selectbutton/selectbutton';
+import { SharedModule } from 'app/shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    CommonModule,
     FormsModule,
+
     InputTextModule,
     ButtonModule,
     DataTableModule,
     TooltipModule,
-    SelectButtonModule,
-    InputMaskModule
+    InputMaskModule,
+
+    SharedModule
   ],
   declarations: [
     PessoaCadastroComponent,
