@@ -7,18 +7,19 @@ import { AppComponent } from './app.component';
 
 import { NavbarComponent } from './navbar/navbar.component';
 import { PessoasModule } from './pessoas/pessoas.module';
+import { CoreModule } from './core/core.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    NavbarComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     PessoasModule,
-    LancamentosModule
+    LancamentosModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
