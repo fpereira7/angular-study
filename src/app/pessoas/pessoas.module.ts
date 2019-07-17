@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PessoaCadastroComponent } from 'app/pessoas/pessoa-cadastro/pessoa-cadastro.component';
 import { PessoasPesquisaComponent } from 'app/pessoas/pessoas-pesquisa/pessoas-pesquisa.component';
-import { PessoasGridComponent } from 'app/pessoas/pessoas-grid/pessoas-grid.component';
 
 import { InputMaskModule } from 'primeng/components/inputmask/inputmask';
 import { TooltipModule } from 'primeng/components/tooltip/tooltip';
@@ -27,8 +26,7 @@ import { SharedModule } from 'app/shared/shared.module';
   ],
   declarations: [
     PessoaCadastroComponent,
-    PessoasPesquisaComponent,
-    PessoasGridComponent
+    PessoasPesquisaComponent
   ],
   exports: [
     PessoaCadastroComponent,
