@@ -1,6 +1,6 @@
 import { LancamentoService, LancamentoFiltro } from './../lancamento.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { LazyLoadEvent } from 'primeng/components/common/api';
+import { LazyLoadEvent, ConfirmationService } from 'primeng/components/common/api';
 import { ToastyService, ToastyConfig } from 'ng2-toasty';
 
 
@@ -16,7 +16,12 @@ export class LancamentosPesquisaComponent implements OnInit {
   lancamentos = [];
   @ViewChild('tabela') grid;
 
-  constructor(private lancamentoService: LancamentoService, private toasty: ToastyService, private toastyConfig: ToastyConfig) { 
+  constructor(
+    private lancamentoService: LancamentoService, 
+    private toasty: ToastyService, 
+    private toastyConfig: ToastyConfig,
+    private confirmation: ConfirmationService
+    ) {
     this.toastyConfig.position = "top-right";
   }
 
@@ -39,6 +44,15 @@ export class LancamentosPesquisaComponent implements OnInit {
   aoMudarPagina(event: LazyLoadEvent) {
     const pagina = event.first / event.rows;
     this.pesquisar(pagina);
+  }
+
+  confirmarExclusao(lancamento: any) {
+    this.confirmation.confirm({
+      message: 'Tem certeza que deseja excluir?',
+      accept: () => {
+        this.excluir(lancamento);
+      }
+    });
   }
 
   excluir(lancamento: any) {
