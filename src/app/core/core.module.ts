@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ErrorHandlerService } from './error-handler.service';
 import { ConfirmDialogModule } from 'primeng/components/confirmdialog/confirmdialog';
 import { PessoaService } from 'app/pessoas/pessoa.service';
+import { CategoriaService } from 'app/categorias/categoria.service';
 
 @NgModule({
   imports: [
@@ -20,6 +21,7 @@ import { PessoaService } from 'app/pessoas/pessoa.service';
     ErrorHandlerService,
     LancamentoService,
     PessoaService,
+    CategoriaService,
     ConfirmationService,
     { provide: LOCALE_ID, useValue: 'pt-BR'}
   ]
