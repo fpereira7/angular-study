@@ -13,6 +13,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { SelectButtonModule } from 'primeng/components/selectbutton/selectbutton';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
@@ -28,6 +29,7 @@ import { SelectButtonModule } from 'primeng/components/selectbutton/selectbutton
     DropdownModule,
     CurrencyMaskModule,
     InputMaskModule,
+    RouterModule
   ],
   declarations: [
     LancamentoCadastroComponent,

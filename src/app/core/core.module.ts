@@ -8,12 +8,14 @@ import { ErrorHandlerService } from './error-handler.service';
 import { ConfirmDialogModule } from 'primeng/components/confirmdialog/confirmdialog';
 import { PessoaService } from 'app/pessoas/pessoa.service';
 import { CategoriaService } from 'app/categorias/categoria.service';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
     CommonModule,
     ToastyModule.forRoot(),
     ConfirmDialogModule,
+    RouterModule
   ],
   declarations: [NavbarComponent],
   exports: [NavbarComponent, ToastyModule, ConfirmDialogModule],
