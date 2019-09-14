@@ -9,6 +9,8 @@ import { ConfirmDialogModule } from 'primeng/components/confirmdialog/confirmdia
 import { PessoaService } from 'app/pessoas/pessoa.service';
 import { CategoriaService } from 'app/categorias/categoria.service';
 import { RouterModule } from '@angular/router';
+import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada.component';
+import { Title } from '@angular/platform-browser';
 
 @NgModule({
   imports: [
@@ -17,7 +19,7 @@ import { RouterModule } from '@angular/router';
     ConfirmDialogModule,
     RouterModule
   ],
-  declarations: [NavbarComponent],
+  declarations: [NavbarComponent, PaginaNaoEncontradaComponent],
   exports: [NavbarComponent, ToastyModule, ConfirmDialogModule],
   providers: [
     ErrorHandlerService,
@@ -25,6 +27,7 @@ import { RouterModule } from '@angular/router';
     PessoaService,
     CategoriaService,
     ConfirmationService,
+    Title,
     { provide: LOCALE_ID, useValue: 'pt-BR'}
   ]
 })

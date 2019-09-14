@@ -3,6 +3,7 @@ import { LancamentoService, LancamentoFiltro } from './../lancamento.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { LazyLoadEvent, ConfirmationService } from 'primeng/components/common/api';
 import { ToastyService, ToastyConfig } from 'ng2-toasty';
+import { Title } from '@angular/platform-browser';
 
 
 @Component({
@@ -22,17 +23,18 @@ export class LancamentosPesquisaComponent implements OnInit {
     private errorHandler: ErrorHandlerService,
     private toasty: ToastyService,
     private toastyConfig: ToastyConfig,
-    private confirmation: ConfirmationService
+    private confirmation: ConfirmationService,
+    private title: Title
     ) {
     this.toastyConfig.position = "top-right";
   }
 
   ngOnInit() {
+    this.title.setTitle('Pesquisa de lançamentos');
   }
 
   pesquisar(pagina = 0) {
     this.filtro.pagina = pagina;
-    
     this.lancamentoService.pesquisar(this.filtro)
       .then(resultado => {
         this.totalRegistros = resultado.total;
